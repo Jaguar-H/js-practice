@@ -1,17 +1,17 @@
 const jungle = "L    LZ L L Z"
-const limit = jungle.length
+const jungleLength = jungle.length
 let distance = 0
 let closestDistance = Infinity
 let lion = NaN
 let zebra = NaN
 
-for(let i = 0 ; i < limit ; i++ ){   
-    if (jungle[i]=== "L"){
-        lion = i
-        for (let j = 0 ;j < limit ; j++){
+for(let lionPosition = 0 ; lionPosition < jungleLength ; lionPosition++ ){   
+    if (jungle[lionPosition]=== "L"){
+        lion = lionPosition
+        for (let zebraPosition = 0 ;zebraPosition < jungleLength ; zebraPosition++){
             
-            if (jungle[j]==="Z"){
-                zebra = j
+            if (jungle[zebraPosition]==="Z"){
+                zebra = zebraPosition
                 distance = lion > zebra ? lion - zebra : zebra - lion
                 closestDistance = distance < closestDistance ? distance : closestDistance
             }
