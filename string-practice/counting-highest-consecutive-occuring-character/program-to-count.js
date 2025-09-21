@@ -1,5 +1,5 @@
-const input = "XXX00XXQQRRRRRR"
-const limit  = input.length 
+const inputString = "XXX00XXQQRRRRRR"
+const limit  = inputString.length 
 let currentLetter = ""
 let previousLetter = ""
 let repetedString = ""
@@ -9,7 +9,7 @@ let repeatingString = ""
 let highestRepeatingString = ""
 
 for(let letter = 0 ; letter < limit ; letter ++  ){
-    currentLetter = input[letter]
+    currentLetter = inputString[letter]
 
     if (currentLetter !== previousLetter){
 
