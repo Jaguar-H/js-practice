@@ -1,25 +1,25 @@
 const inputString = "hello world";
 let newString = "";
-const subString = "lo";
+const subString = "rl";
 let editedString = "";
 let position = 0;
-let eachChar = ""
 
-while (eachChar < inputString.length) {
+for(let each = 0; each < inputString.length; each++){
+    
     position = each
-    for (let j = 0; j < subString.length; j++) {
-        newString = newString + inputString[position];
+    for(let j = 0; j < subString.length; j++){
+        newString = newString+ inputString[position];
+
         position++;
     }
     
-    if (newString === subString) {
-        each = position - 1
+    if (newString === subString){
+        each = position-1
         newString = "";
-    } else {
+    }else{
         editedString += inputString[each]
         newString = ""
-        eachChar++;
     }
-
+    
 }
 console.log(editedString);
